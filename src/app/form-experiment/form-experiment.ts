@@ -82,8 +82,8 @@ export class FormExperiment {
 
         for (const feature of features) {
           this.form.controls.feature.addControl(
-            feature.code,
-            new FormControl(feature.value)
+            feature.code, // имя или ключ для конрола
+            new FormControl(feature.value) // значение контрола
           )
         }
       })
@@ -104,14 +104,15 @@ export class FormExperiment {
   }
 
   onSubmit(event: SubmitEvent) {
-    this.form.markAsTouched()
-    this.form.updateValueAndValidity()
+    this.form.markAsTouched() // помечает все поля, как трогали
+    this.form.updateValueAndValidity() // метод проверяет все поля на соответствие с правилами валидации
     if (this.form.invalid) return
 
     console.log('this.form.value', this.form.value)
-    console.log('this.form.getRawValue', this.form.getRawValue())
+    console.log('this.form.getRawValue', this.form.getRawValue()) // выводим поля формы
   }
 
+  // вставляем новую форму адреса в начало массива адресов
   addAddress() {
     this.form.controls.addresses.insert(0, getAddressForm())
   }
@@ -120,5 +121,5 @@ export class FormExperiment {
     this.form.controls.addresses.removeAt(index, {emitEvent: false})
   }
 
-  sort = () => 0
+  sort = () => 0 // для чекбоксов чтобы работали с правильной логикой
 }

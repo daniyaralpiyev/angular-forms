@@ -58,3 +58,19 @@
   justify-content: space-between;
   margin-bottom: 24px;
 }
+
+.validation {
+  display: none;
+}
+
+.tt-input.ng-invalid.ng-touched {
+  border: 2px solid tomato;
+}
+
+.tt-input.ng-invalid.ng-touched + .validation {
+  display: block;
+}
+
+//.ng-submitted {
+//  border: 10px solid aquamarine;
+//}

@@ -2,7 +2,7 @@ import {Component,} from '@angular/core';
 import {FormsModule, NgForm} from '@angular/forms';
 import {JsonPipe} from '@angular/common';
 import {NoReactValidator} from './no-react.validator';
-import {FormExperiment} from './form-experiment/form-experiment';
+import {FormExperimental} from './form-experiment/form-experimental.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import {FormExperiment} from './form-experiment/form-experiment';
     FormsModule,
     JsonPipe,
     NoReactValidator,
-    FormExperiment
+    FormExperimental
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

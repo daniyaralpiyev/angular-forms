@@ -75,10 +75,10 @@ function validateDateRange({fromControlName, toControlName}: { fromControlName: 
     ReactiveFormsModule,
     KeyValuePipe
   ],
-  templateUrl: './form-experiment.html',
-  styleUrl: './form-experiment.scss'
+  templateUrl: './form-experimental.component.html',
+  styleUrl: './form-experimental.component.scss'
 })
-export class FormExperiment {
+export class FormExperimental {
   ReceiverType = ReceiverType
 
   mockService = inject(MockService)

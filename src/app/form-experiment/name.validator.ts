@@ -29,8 +29,8 @@ export class NameValidator implements AsyncValidator {
         delay(1000),
         map(users => {
           return users.filter((u: Profile) => u.firstName === control.value).length > 0
-            ? { nameValid: { message: `Имя должно быть одним из списка: ${users.map((u: Profile) => u.firstName).join(', ')}` } }
-            : null;
+            ? null
+            : { nameValid: { message: `Имя должно быть одним из списка: ${users.map((u: Profile) => u.firstName).join(', ')}` } }
         })
       );
   }
